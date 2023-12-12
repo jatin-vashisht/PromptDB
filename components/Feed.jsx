@@ -35,7 +35,10 @@ const Feed = () => {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch('https://prompt-hcx9zvb1h-jatin-vashishts-projects.vercel.app/api/prompt');
+      const res = await fetch('/api/prompt', {
+        cache: 'no-store'
+      });
+
       const data = await res.json();
 
       setPosts(data);
