@@ -16,7 +16,9 @@ const MyProfile = ({params}) => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await fetch(`https://prompt-hcx9zvb1h-jatin-vashishts-projects.vercel.app/api/users/${params.id}/posts`)
+      const res = await fetch(`/api/users/${params.id}/posts`,{
+        cache: 'no-store'
+      })
       const data = await res.json()
       
       setPosts(data)
