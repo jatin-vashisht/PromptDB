@@ -89,7 +89,7 @@ const Nav = () => {
                   href='/profile'
                   className='dropdown_link'
                   onClick={() => setToggleDropdown(false)}
-                >k
+                >
                   My Profile
                 </Link>
                 <Link
