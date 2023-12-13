@@ -49,10 +49,10 @@ const Feed = () => {
   useEffect(() => {
     const searchFilteredPosts = posts.filter(
       (p) =>
-        p.prompt.includes(debouncedSearchText) ||
-        p.tag.includes(debouncedSearchText) ||
-        p.creator.email.includes(debouncedSearchText) ||
-        p.creator.username.includes(debouncedSearchText)
+        p.prompt.toLowerCase().includes(debouncedSearchText.toLowerCase()) ||
+        p.tag.toLowerCase().includes(debouncedSearchText.toLowerCase()) ||
+        p.creator.email.toLowerCase().includes(debouncedSearchText.toLowerCase()) ||
+        p.creator.username.toLowerCase().includes(debouncedSearchText.toLowerCase())
     );
     setFilteredPosts(searchFilteredPosts)
     if (debouncedSearchText.length === 0)
