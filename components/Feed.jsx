@@ -38,6 +38,7 @@ const Feed = () => {
       const res = await fetch('/api/prompt', {
         cache: 'no-store'
       });
+
       const data = await res.json();
 
       setPosts(data);

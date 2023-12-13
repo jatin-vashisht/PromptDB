@@ -33,7 +33,7 @@ const MyProfile = () => {
 
     if (hasConfirmed) {
       try {
-        await fetch(`/api/prompt/${post._id, toString()}`, {
+        await fetch(`https://prompt-hcx9zvb1h-jatin-vashishts-projects.vercel.app/api/prompt/${post._id, toString()}`, {
           method: 'DELETE'
         })
 
