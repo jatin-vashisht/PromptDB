@@ -14,7 +14,7 @@ const MyProfile = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await fetch(`/api/users/${session?.user.id}/posts`,{
+      const res = await fetch(`${process.env.HOST}/api/users/${session?.user.id}/posts`,{
         cache: 'no-store'
       })
       const data = await res.json()
@@ -33,7 +33,7 @@ const MyProfile = () => {
 
     if (hasConfirmed) {
       try {
-        await fetch(`https://prompt-hcx9zvb1h-jatin-vashishts-projects.vercel.app/api/prompt/${post._id, toString()}`, {
+        await fetch(`${process.env.HOST}/api/prompt/${post._id, toString()}`, {
           method: 'DELETE'
         })
 

@@ -35,7 +35,7 @@ const Feed = () => {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch('/api/prompt', {
+      const res = await fetch(`${process.env.HOST}/api/prompt`, {
         cache: 'no-store'
       });
 

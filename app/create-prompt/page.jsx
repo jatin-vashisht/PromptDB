@@ -18,7 +18,7 @@ const CreatePrompt = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://prompt-hcx9zvb1h-jatin-vashishts-projects.vercel.app/api/prompt/new', {
+      const response = await fetch(`${process.env.HOST}/api/prompt/new`, {
         method: 'POST',
         body: JSON.stringify({
           prompt: post.prompt,
