@@ -16,7 +16,7 @@ const MyProfile = ({params}) => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await fetch(`${process.env.HOST}/api/users/${params.id}/posts`,{
+      const res = await fetch(`/api/users/${params.id}/posts`,{
         cache: 'no-store'
       })
       const data = await res.json()
@@ -35,7 +35,7 @@ const MyProfile = ({params}) => {
 
     if (hasConfirmed) {
       try {
-        await fetch(`${process.env.HOST}/api/prompt/${post._id, toString()}`, {
+        await fetch(`/api/prompt/${post._id, toString()}`, {
           method: 'DELETE'
         })
 
